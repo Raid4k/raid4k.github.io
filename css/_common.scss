@@ -20,7 +20,7 @@ h1{
       color: #00ffff;
    
       overflow: hidden;
-      animation: ss 8s infinite linear;
+      animation: ss 8s infinite linear alternate;
   }
 }
 @keyframes ss{
