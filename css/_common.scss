@@ -11,14 +11,15 @@ h1{
   font-size: 150px;
   letter-spacing: 5px;
   text-transform: uppercase;
-
+  font-family: 'Anton', sans-serif;
+  text-shadow: 0px 0px 4px #00ffff;
   &:before{
       position: absolute;
       top: 0;
       left: 0;
       content: 'SoftSwiss.today';
       color: #00ffff;
-   
+      text-shadow: 0px 0px 4px #212121;
       overflow: hidden;
       animation: ss 8s infinite linear alternate;
   }
