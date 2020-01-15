@@ -1,0 +1,240 @@
+header {
+    background: grey;
+    width: 100%;
+    height: 400px;
+
+    .header_wrapp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+
+        .logo {
+            margin-right: 20px;
+
+            img {
+                height: 60px;
+                display: block;
+            }
+        }
+
+        nav {
+            .navigation {
+                display: flex;
+
+                .nav_item-wrapp {
+                    margin-right: 40px;
+                    height: 60px;
+                    position: relative;
+
+                    &:hover {
+                        .submenu {
+                            visibility: visible;
+                            opacity: 1;
+                            height: 100%;
+
+                        }
+
+                        .nav_item {
+                            span {
+                                position: relative;
+
+                                &:before {
+                                    content: '';
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 2px;
+                                    background: $orange;
+                                    bottom: -4px;
+                                    left: 0;
+                                    transition: all .3s;
+                                }
+                            }
+                        }
+                    }
+
+
+                    .submenu {
+                        position: absolute;
+                        left: 50%;
+                        top: 40px;
+                        width: 100px;
+                        height: 0;
+                        background: white;
+                        display: block;
+                        border-radius: 6px;
+                        box-shadow: 0 0 30px rgba(0, 0, 0, .2);
+                        transform: translate(-50%, 20px);
+                        transition: .3s;
+                        visibility: hidden;
+                        opacity: 0;
+
+                        &:after {
+                            position: absolute;
+                            content: '';
+                            z-index: 0;
+                            top: -20px;
+                            left: calc(50% - 10px);
+                            border: 10px solid transparent;
+                            border-bottom: 10px solid $fffcolor;
+
+                        }
+
+
+
+                        li {
+
+                            background: #fff;
+                            position: relative;
+                            z-index: 3;
+
+                            &:first-child {
+                                border-radius: 6px 6px 0 0;
+                            }
+
+                            &:last-child {
+                                border-radius: 0px 0px 6px 6px;
+                            }
+
+                            &:hover {
+                                background: $orange;
+
+                                a {
+                                    color: $fffcolor;
+                                    transition: all 0s;
+
+                                }
+                            }
+
+                            a {
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                padding: 10px 20px;
+                                color: $maintext;
+
+
+                            }
+
+                        }
+                    }
+
+                    .nav_item {
+                        text-transform: uppercase;
+                        position: relative;
+                        color: $fffcolor;
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        line-height: 60px;
+
+
+
+                        span {
+                            position: relative;
+
+                            &:before {
+                                content: '';
+                                position: absolute;
+                                width: 0;
+                                height: 2px;
+                                background: $orange;
+                                bottom: -4px;
+                                left: 0;
+                                transition: all .3s;
+                            }
+                        }
+
+                        &:hover {
+
+                            span {
+                                position: relative;
+
+                                &:before {
+                                    content: '';
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 2px;
+                                    background: $orange;
+                                    bottom: -4px;
+                                    left: 0;
+                                    transition: all .3s;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .user_nav {
+            display: flex;
+
+            .search_wrapper {
+                margin: 0px 20px;
+            }
+
+            .lang {
+                margin: 0px 20px;
+                color: $fffcolor;
+
+                select {
+                    text-transform: uppercase;
+                    color: $fffcolor;
+                    border: none;
+                    background: none;
+                    cursor: pointer;
+                    outline: none;
+
+                    option {
+                        background: $orange;
+                        border: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .login {
+
+                span {
+                    position: relative;
+                    text-transform: uppercase;
+
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        width: 0;
+                        height: 2px;
+                        background: $orange;
+                        bottom: -4px;
+                        left: 0;
+                        transition: all .3s;
+                    }
+
+                    &:hover {
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            height: 2px;
+                            background: $orange;
+                            bottom: -4px;
+                            left: 0;
+                            transition: all .3s;
+                        }
+                    }
+
+                    &:not(:last-child) {
+                        margin-right: 10px;
+                    }
+
+                    a {
+                        color: $fffcolor;
+                    }
+                }
+            }
+        }
+    }
+}
