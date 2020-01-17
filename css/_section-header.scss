@@ -1,237 +1,242 @@
 header {
-    background: grey;
-    width: 100%;
-    height: 400px;
+    .header_wrapper {
+        .header_top {
+            display: flex;
+            justify-content: space-between;
+            text-transform: uppercase;
+            padding-top: 40px;
 
-    .header_wrapp {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 60px;
-
-        .logo {
-            margin-right: 20px;
-
-            img {
-                height: 60px;
-                display: block;
-            }
-        }
-
-        nav {
-            .navigation {
+            .header_left {
                 display: flex;
+                align-items: center;
 
-                .nav_item-wrapp {
-                    margin-right: 40px;
-                    height: 60px;
-                    position: relative;
+                .logo {
+                    margin-right: 30px;
 
-                    &:hover {
-                        .submenu {
-                            visibility: visible;
-                            opacity: 1;
-                            height: 100%;
-
-                        }
-
-                        .nav_item {
-                            span {
-                                position: relative;
-
-                                &:before {
-                                    content: '';
-                                    position: absolute;
-                                    width: 100%;
-                                    height: 2px;
-                                    background: $orange;
-                                    bottom: -4px;
-                                    left: 0;
-                                    transition: all .3s;
-                                }
-                            }
-                        }
-                    }
-
-
-                    .submenu {
-                        position: absolute;
-                        left: 50%;
-                        top: 40px;
-                        width: 100px;
-                        height: 0;
-                        background: white;
+                    img {
                         display: block;
-                        border-radius: 6px;
-                        box-shadow: 0 0 30px rgba(0, 0, 0, .2);
-                        transform: translate(-50%, 20px);
-                        transition: .3s;
-                        visibility: hidden;
-                        opacity: 0;
+                    }
+                }
 
-                        &:after {
-                            position: absolute;
-                            content: '';
-                            z-index: 0;
-                            top: -20px;
-                            left: calc(50% - 10px);
-                            border: 10px solid transparent;
-                            border-bottom: 10px solid $fffcolor;
-
-                        }
-
-
+                .navigation {
+                    ul.menu {
+                        display: flex;
 
                         li {
-
-                            background: #fff;
+                            
                             position: relative;
-                            z-index: 3;
-
-                            &:first-child {
-                                border-radius: 6px 6px 0 0;
-                            }
-
-                            &:last-child {
-                                border-radius: 0px 0px 6px 6px;
-                            }
-
-                            &:hover {
-                                background: $orange;
-
-                                a {
-                                    color: $fffcolor;
-                                    transition: all 0s;
-
-                                }
-                            }
-
-                            a {
-                                display: block;
-                                width: 100%;
-                                height: 100%;
-                                padding: 10px 20px;
-                                color: $maintext;
-
-
-                            }
-
-                        }
-                    }
-
-                    .nav_item {
-                        text-transform: uppercase;
-                        position: relative;
-                        color: $fffcolor;
-                        width: 100%;
-                        height: 100%;
-                        display: block;
-                        line-height: 60px;
-
-
-
-                        span {
-                            position: relative;
-
-                            &:before {
-                                content: '';
-                                position: absolute;
-                                width: 0;
-                                height: 2px;
-                                background: $orange;
-                                bottom: -4px;
-                                left: 0;
-                                transition: all .3s;
-                            }
-                        }
-
-                        &:hover {
-
-                            span {
-                                position: relative;
-
-                                &:before {
-                                    content: '';
-                                    position: absolute;
-                                    width: 100%;
-                                    height: 2px;
-                                    background: $orange;
-                                    bottom: -4px;
-                                    left: 0;
-                                    transition: all .3s;
-                                }
-                            }
-                        }
-                    }
-                }
-
-            }
-        }
-
-        .user_nav {
-            display: flex;
-
-            .search_wrapper {
-                margin: 0px 20px;
-            }
-
-            .lang {
-                margin: 0px 20px;
-                color: $fffcolor;
-
-                select {
-                    text-transform: uppercase;
-                    color: $fffcolor;
-                    border: none;
-                    background: none;
-                    cursor: pointer;
-                    outline: none;
-
-                    option {
-                        background: $orange;
-                        border: none;
-                        cursor: pointer;
-                    }
-                }
-            }
-
-            .login {
-
-                span {
-                    position: relative;
-                    text-transform: uppercase;
-
-
-                    &:before {
-                        content: '';
-                        position: absolute;
-                        width: 0;
-                        height: 2px;
-                        background: $orange;
-                        bottom: -4px;
-                        left: 0;
-                        transition: all .3s;
-                    }
-
-                    &:hover {
-                        &:before {
-                            content: '';
-                            position: absolute;
                             width: 100%;
-                            height: 2px;
-                            background: $orange;
-                            bottom: -4px;
-                            left: 0;
-                            transition: all .3s;
+                            &:hover{
+                                .submenu{
+                                    visibility:visible;
+                                    opacity: 1;
+                                   
+                                    
+                                }
+                            }
+                            a {
+                                color: $fffcolor;
+                                position: relative;
+                                display: block;
+                                height: 100%;
+                                width: 100%;
+                                padding: 15px;
+                                
+                                span{
+                                    text-align: center;
+                                    position: relative;
+                                    &:after {
+                                        content: '';
+                                        position: absolute;
+                                        width: 0;
+                                        height: 2px;
+                                        background: linear-gradient(186.05deg, #FFC000 1.55%, #FF8A00 95.8%);
+                                        bottom: -2px;
+                                        left: 0;
+                                        
+                                    }
+                                }
+                                
+
+                                &:hover {
+                                    span{
+                                        &:after {
+                                            width: 100%;
+                                            transition: all .3s;
+                                        }
+                                    }
+                                    
+                                }
+                            }
+
+                            ul.submenu {
+                                background: #FFFFFF;
+                                border-radius: 5px;
+                                position: absolute;
+                                width: 128px;
+                                top: 45px;
+                                left: calc(50% - 64px);
+                                border-radius: 5px;
+                               opacity: 0;
+                                visibility: hidden;
+                                transition: all .3s;
+                                
+                                &:before{
+                                    position: absolute;
+                                    cursor: pointer;
+                                    content: '';
+                                    top: -20px;
+                                    left: calc(50% - 12px);
+                                    border: 10px solid transparent; border-bottom: 10px solid #fff;
+                                }
+                                
+                                    li{
+                                        
+                                        margin-right: 0;
+                                        &:first-child{
+                                           a{border-radius: 5px 5px 0 0;}
+                                        }
+                                        &:last-child{
+                                            a{border-radius: 0 0 5px 5px;}
+                                        }
+                                        a{
+                                            color: #555555;
+                                            font-size: 14px;
+                                            line-height: 17px;
+                                            text-transform: none;
+                                            text-align: left;
+                                            display: block;
+                                            width: 100%;
+                                            height: 100%;
+                                            padding: 16px 12px;
+                                            
+                                            span {&:after{
+                                                display: none;
+                                            }
+                                        }
+                                            &:hover{
+                                                background:$bgorange;
+                                                color: $fffcolor;
+                                                transition: all .3s;
+                                            }
+                                        }
+                                    }
+                               
+                            }
                         }
                     }
 
-                    &:not(:last-child) {
-                        margin-right: 10px;
+                }
+            }
+
+            .header_right {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                width: 50%;
+
+                .search {
+                    width: 70%;
+                    margin-right: 5px;
+                    display: flex;
+                    justify-content: flex-end;
+
+                    input {
+                        max-width: 280px;
+                        min-width: 90px;
+                        width: 100%;
+                        height: 28px;
+                        border: none;
+                        background: #FFFFFF;
+                        border-radius: 3px;
+                        outline: none;
+                    }
+                }
+
+                .login {
+                    display: flex;
+                    justify-content: flex-end;
+                    width: 30%;
+
+                    @include breakpoint(xlgx-min) {
+                        flex-direction: column;
                     }
 
                     a {
+                        width: 73px;
+                        height: 28px;
+                        background: linear-gradient(232.46deg, #FFC000 1.55%, #FF8A00 95.8%), #FFFFFF;
+                        border-radius: 3px;
+                        text-align: center;
+                        line-height: 28px;
                         color: $fffcolor;
+                        font-size: 10px;
+                        transition: all .3s;
+                        margin-right: 5px;
+
+                        @include breakpoint(xlgx-min) {
+                            width: 53px;
+
+                            &:not(:last-child) {
+                                margin-bottom: 5px;
+                            }
+
+                        }
+
+                        &:hover {
+                            background: #FFFFFF;
+                            color: #000;
+                        }
+                    }
+                }
+
+                .lang {
+                    display: none;
+                }
+            }
+        }
+
+        .header_bot {
+            padding-top: 40px;
+
+            .hero_header {
+                display: flex;
+                justify-content: space-between;
+
+                .header_article {
+                    display: flex;
+                    flex-direction: column;
+                    height: 250px;
+                    max-width: 450px;
+                    width: 100%;
+
+                    h1 {
+                        font-size: 34px;
+                    }
+
+                    p {
+                        font-size: 18px;
+                        line-height: 22px;
+                        margin: 20px 0;
+                    }
+
+                    a {
+                        @extend .btn;
+                        font-size: 12px;
+                    }
+                }
+
+                .hero_header-img {
+                    position: relative;
+                    height: 100%;
+                    width: 100%;
+
+                    img {
+                        display: block;
+                        position: absolute;
+                        right: 0;
+                        width: 85%;
+
                     }
                 }
             }

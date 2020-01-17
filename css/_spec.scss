@@ -1,3 +1,23 @@
 $fffcolor:#fff;
 $orange:orange;
 $maintext:#000;
+$bgorange:linear-gradient(222.03deg, #FFC000 1.55%, #FF8A00 95.8%);
+ .font{
+    font-family: 'Inter Regular';
+    font-style: normal;
+    font-weight:normal;
+}
+.btn{
+color: $fffcolor;
+padding: 12px 32px;
+width: 135px;
+height: 39px;
+background: linear-gradient(224.43deg, #FFC000 1.55%, #FF8A00 95.8%);
+border-radius: 5px;
+text-transform: uppercase;
+transition: all .3s;
+&:hover{
+    background: #fff; 
+   color: #000;
+}
+}
