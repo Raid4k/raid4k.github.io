@@ -80,7 +80,7 @@ header {
                                opacity: 0;
                                 visibility: hidden;
                                 transition: all .3s;
-                                
+                                z-index: 1000;
                                 &:before{
                                     position: absolute;
                                     cursor: pointer;
