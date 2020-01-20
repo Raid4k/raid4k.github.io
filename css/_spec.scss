@@ -1,23 +1,67 @@
 $fffcolor:#fff;
-$orange:orange;
-$maintext:#000;
+$orange:#FF8A00;
+$maintext:#333333;
 $bgorange:linear-gradient(222.03deg, #FFC000 1.55%, #FF8A00 95.8%);
- .font{
+
+.font {
     font-family: 'Inter Regular';
     font-style: normal;
-    font-weight:normal;
+    font-weight: normal;
 }
-.btn{
-color: $fffcolor;
-padding: 12px 32px;
-width: 135px;
-height: 39px;
-background: linear-gradient(224.43deg, #FFC000 1.55%, #FF8A00 95.8%);
-border-radius: 5px;
-text-transform: uppercase;
-transition: all .3s;
-&:hover{
-    background: #fff; 
-   color: #000;
+
+.btn {
+    color: $fffcolor;
+    padding: 12px 32px;
+    width: 135px;
+    height: 39px;
+    background: linear-gradient(224.43deg, #FFC000 1.55%, #FF8A00 95.8%);
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all .3s;
+
+    &:hover {
+        background: #fff;
+        color: #000;
+    }
+
 }
+
+.btn_main {
+    color: $fffcolor;
+    padding: 8px 32px;
+    width: 102px;
+    height: 28px;
+    border-radius: 3px;
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255, 138, 0, 0);
+
+    &:hover {
+        background: #fff;
+        color: #000;
+        border: 1px solid #FF8A00;
+
+    }
+}
+
+.see_btn {
+    color: $maintext;
+    font-size: 12px;
+    line-height: 15px;
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 2px;
+    text-align: center;
+    padding: 8px 32px;
+    text-transform: uppercase;
+    width: 171px;
+    height: 31px;
+    &:hover {
+        border: 1px solid #FF8A00;
+        box-shadow: 0px 2px 5px rgba(255, 138, 0, 0.2);
+        border-radius: 2px;
+        transition: border .3s;
+        color: $orange;
+    }
 }
