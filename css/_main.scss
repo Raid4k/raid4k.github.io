@@ -14,31 +14,7 @@ main {
     .main-wrapper {
         margin-right: 5%;
 
-        .section_title {
-            position: relative;
-
-            &:after {
-                content: '';
-                position: absolute;
-                height: 2px;
-                width: 100%;
-                background: #E5E5E5;
-                bottom: -5px;
-                left: 0;
-            }
-
-            &:before {
-                content: '';
-                position: absolute;
-                height: 2px;
-                width: 136px;
-                background: linear-gradient(182.86deg, #FFC000 1.55%, #FF8A00 95.8%);
-                bottom: -5px;
-                left: 0;
-                z-index: 1;
-            }
-
-        }
+        
 
         .new_casino {
             text-align: left;
@@ -52,7 +28,8 @@ main {
                 .new_casino-item {
                     display: flex;
                     margin: 0 10px 10px 0px;
-
+                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+                    border-radius: 3px;
                     flex: 0 0 46%;
 
                     @include breakpoint (xlgx-min) {
@@ -66,9 +43,10 @@ main {
                         min-width: 190px;
                         max-width: 200px;
                         min-height: 150px;
-                        max-height: 190px;
+
                         background: url(../img/casilogo.png);
                         background-size: cover;
+                        background-repeat: no-repeat;
                         margin-right: 10px;
 
                     }
@@ -80,6 +58,7 @@ main {
                         h2 {
                             font-size: 18px;
                             font-weight: 500;
+                            line-height: 40px;
                         }
 
                         .casino_rating {
@@ -90,10 +69,17 @@ main {
                             font-size: 12px;
                             line-height: 18px;
                             margin: 10px 0;
+                            overflow: hidden;
+                            display: block;
+                            display: -webkit-box;
+                            text-overflow: ellipsis;
+                            -webkit-line-clamp: 3; /* количество строк */
+                            -webkit-box-orient: vertical;
                         }
 
                         .casino_btn {
                             @extend .btn_main;
+                            margin-bottom: 10px;
                         }
                     }
                 }
@@ -136,8 +122,11 @@ main {
             }
         }
 
-
+.f_bonus{
+    
+}
     }
+
 
     .right-side {
         width: 100%;
@@ -148,6 +137,29 @@ main {
 
         h1 {
             text-align: center;
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                height: 2px;
+                width: 100%;
+                background: #E5E5E5;
+                bottom: -5px;
+                left: 0;
+            }
+            span {
+                position: relative;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    height: 2px;
+                    width: 100%;
+                    background: linear-gradient(182.86deg, #FFC000 1.55%, #FF8A00 95.8%);
+                    bottom: -5px;
+                    left: 0;
+                    z-index: 1;
+                }
+            }
         }
 
         .top-list {
@@ -155,8 +167,6 @@ main {
             max-width: 330px;
             min-width: 250px;
             height: 450px;
-
-
             &.top-bonus {
                 max-height: 358px;
 
@@ -207,14 +217,16 @@ main {
             h2 {
 
                 padding: 5px 15px;
-                font-size: 20px;
                 background: #fff;
 
             }
 
             ul {
-                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.08);
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
                 border-radius: 2px;
+                background: #FFFFFF;
+                padding: 30px 0;
+                margin-top: 30px;
 
                 li {
 
@@ -250,7 +262,7 @@ main {
 
                         span {
                             width: 100%;
-                            text-align: center;
+                            padding-left: 15%;
                             margin: 0 5px;
                             text-transform: uppercase;
                         }
@@ -277,7 +289,7 @@ main {
                     &:hover {
                         .top10-playbtn {
                             right: 0;
-
+                            color: $maintext;
                             transition: all .3s;
 
 
