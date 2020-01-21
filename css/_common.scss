@@ -8,10 +8,9 @@ body {
     font-size: 14px;
     color: $fffcolor;
     background: url("../img/background.svg"),#fff;
-    background-size: cover;
     background-repeat: no-repeat;
-    background-position: 100%;
-    height: 100vh;
+    background-position: top right;
+    
 }
 h1,h2,h3{
     margin: 0;
