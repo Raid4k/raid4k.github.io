@@ -14,7 +14,7 @@ main {
     .main-wrapper {
         margin-right: 5%;
 
-        
+
 
         .new_casino {
             text-align: left;
@@ -43,7 +43,6 @@ main {
                         min-width: 190px;
                         max-width: 200px;
                         min-height: 150px;
-
                         background: url(../img/casilogo.png);
                         background-size: cover;
                         background-repeat: no-repeat;
@@ -73,7 +72,8 @@ main {
                             display: block;
                             display: -webkit-box;
                             text-overflow: ellipsis;
-                            -webkit-line-clamp: 3; /* количество строк */
+                            -webkit-line-clamp: 3;
+                            /* количество строк */
                             -webkit-box-orient: vertical;
                         }
 
@@ -122,9 +122,194 @@ main {
             }
         }
 
-.f_bonus{
+        .f_block {
+            margin-top: 30px;
 
-}
+            .new_news-wrapper.f_wrapper {
+                display: flex;
+                flex-direction: column;
+
+                .f_item-wrapper {
+                    display: flex;
+                    margin-bottom: 30px;
+
+                }
+                .new_news-list{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    .new_news-list-item{
+                        margin-left: 0;                  
+                        flex: 0 0 48%;
+                        &:last-child{
+                            margin-bottom: 20px;
+                        }
+                       
+                        
+                    }
+                }
+            }
+
+            .f_wrapper {
+                margin-top: 30px;
+                display: flex;
+
+
+
+                .f_item {
+                    width: 50%;
+                    
+                    .f_img {
+                        // background: url(../img/DsdSiW.png);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        width: 100%;
+                        max-width: 420px;
+                        height: 180px;
+                        display: block;
+                    }
+
+                    .f_descr {
+                        .f_name {
+                            font-weight: 500;
+                            font-size: 1.286em;
+                            margin: 10px 0;
+
+                        }
+
+                        .f_date {
+                            text-transform: uppercase;
+                            color: #A0A0A0;
+                            font-size: 0.857em;
+                            font-weight: 300;
+
+                            .date_by {
+
+                                span {
+                                    color: $orange;
+                                    margin-left: 5px;
+                                }
+                            }
+
+                            .time_svg {
+                                position: relative;
+                                margin-left: 30px;
+
+                                &:before {
+                                    content: '';
+                                    position: absolute;
+                                    left: -16px;
+                                    top: 1px;
+                                    width: 12px;
+                                    height: 12px;
+                                    background: url(../img/time.svg);
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                }
+                            }
+                        }
+
+                        .f_text {
+                            margin: 10px 0;
+                            padding-right: 35px;
+                            overflow: hidden;
+
+                            display: -webkit-box;
+                            text-overflow: ellipsis;
+                            -webkit-line-clamp: 4;
+                            /* количество строк */
+                            -webkit-box-orient: vertical;
+                        }
+
+                        .f_btn {
+                            padding: 12px 40px;
+                            border: 1px solid transparent;
+                            margin-top: 20px;
+
+                            &:hover {
+                                background: #fff;
+                                color: #000;
+                                border: 1px solid #FF8A00;
+
+                            }
+                        }
+                    }
+
+                }
+
+                .f_list {
+                    width: 50%;
+
+                    .f_list-item {
+                        display: flex;
+                        margin-left: 20px;
+                        background: #FFFFFF;
+                        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.08);
+                        border-radius: 3px;
+                        &:not(:last-child) {
+                            margin-bottom: 20px;
+                        }
+
+
+                        .f_list-img {
+
+                            width: 110px;
+                            height: 110px;
+                            flex: 0 0 110px;
+
+                        }
+
+                        .f_list-descr {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-evenly;
+
+                            width: 100%;
+                            margin-left: 20px;
+
+                            h3 {
+                                font-size: 1em;
+                                line-height: 21px;
+                                overflow: hidden;
+                                display: block;
+                                display: -webkit-box;
+                                text-overflow: ellipsis;
+                                -webkit-line-clamp: 2;
+                                /* количество строк */
+                                -webkit-box-orient: vertical;
+                                color: #333333;
+                            }
+
+                            .f_list-date {
+                                font-size: 0.857em;
+                                color: #A0A0A0;
+
+                                .f_list-time {
+                                    position: relative;
+                                    margin-left: 16px;
+
+                                    &:before {
+                                        content: '';
+                                        position: absolute;
+                                        left: -16px;
+                                        top: 1px;
+                                        width: 12px;
+                                        height: 12px;
+                                        background: url(../img/time.svg);
+                                        background-repeat: no-repeat;
+                                        background-size: cover;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+
+        }
+
     }
 
 
@@ -138,6 +323,7 @@ main {
         h1 {
             text-align: center;
             position: relative;
+
             &:after {
                 content: '';
                 position: absolute;
@@ -147,8 +333,10 @@ main {
                 bottom: -5px;
                 left: 0;
             }
+
             span {
                 position: relative;
+
                 &:before {
                     content: '';
                     position: absolute;
@@ -167,19 +355,6 @@ main {
             max-width: 330px;
             min-width: 250px;
             height: 450px;
-            
-
-            &.top-slots {
-                max-height: 260px;
-            }
-
-            .top10-bonus {
-
-                span {
-                    font-size: 1em;
-                }
-            }
-
 
 
             h2 {
@@ -195,6 +370,7 @@ main {
                 background: #FFFFFF;
                 padding: 30px 0;
                 margin-top: 30px;
+                letter-spacing: 1.5px;
 
                 li {
 
@@ -205,6 +381,7 @@ main {
                     overflow: hidden;
                     margin: 5px 0;
 
+
                     a {
                         width: 100%;
                         height: 100%;
@@ -212,7 +389,7 @@ main {
                         align-items: center;
                         margin-left: 0;
                         transition: margin-left .3s;
-                        font-size: 	0.857em;
+                        font-size: 0.857em;
                         line-height: 15px;
                         color: $maintext;
 
@@ -237,6 +414,7 @@ main {
                     }
 
                     .top10-playbtn {
+
                         background: linear-gradient(222.96deg, #FFC000 1.55%, #FF8A00 95.8%), linear-gradient(169.94deg, #1738BC 6.95%, #315EFB 93.05%);
                         box-shadow: 0px 2px 2px rgba(153, 153, 153, 0.2);
                         border-radius: 3px;
@@ -244,7 +422,7 @@ main {
                         width: 80px;
                         text-align: center;
                         text-transform: uppercase;
-                        font-size: 	0.857em;
+                        font-size: 0.857em;
                         padding: 2px;
                         position: absolute;
                         right: -80px;
@@ -252,12 +430,11 @@ main {
                         line-height: 38px;
                         color: $fffcolor;
                         z-index: 1;
-                        
-                        
-                        &:hover{
-                            color: $maintext!important;
+
+                        &:hover {
+                            color: $maintext !important;
                             background: linear-gradient(222.96deg, #FFC000 1.55%, #FF8A00 95.8%), linear-gradient(169.94deg, #1738BC 6.95%, #315EFB 93.05%);
-                            
+
                         }
 
                     }
@@ -270,7 +447,7 @@ main {
 
                         }
 
-                        .top10-list{
+                        .top10-list {
                             background: #E5E5E5;
                         }
 
@@ -280,6 +457,8 @@ main {
                         }
 
                     }
+
+
                 }
             }
         }
