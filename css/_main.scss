@@ -27,7 +27,7 @@ main {
 
                 .new_casino-item {
                     display: flex;
-                    
+
                     margin-bottom: 10px;
                     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
                     border-radius: 3px;
@@ -135,31 +135,39 @@ main {
                     justify-content: space-between;
                     margin-bottom: 30px;
                     width: 100%;
-                    .new_news-item{
+
+                    .new_news-item {
                         flex: 0 0 48%;
-                        
-                        &:not(:last-child){margin-right: 20px;}
+
+                        &:not(:last-child) {
+                            margin-right: 20px;
+                        }
+
                         display: block;
                         width: 50%;
-                        .f_img{
+
+                        .f_img {
                             max-width: unset;
                         }
                     }
 
                 }
-                .new_news-list{
+
+                .new_news-list {
                     width: 100%;
                     display: flex;
                     justify-content: space-between;
                     flex-wrap: wrap;
-                    .new_news-list-item{
-                        margin-left: 0;                  
+
+                    .new_news-list-item {
+                        margin-left: 0;
                         flex: 0 0 48%;
-                        &:last-child{
+
+                        &:last-child {
                             margin-bottom: 20px;
                         }
-                       
-                        
+
+
                     }
                 }
             }
@@ -172,7 +180,7 @@ main {
 
                 .f_item {
                     width: 50%;
-                    
+
                     .f_img {
                         // background: url(../img/DsdSiW.png);
                         background-repeat: no-repeat;
@@ -260,11 +268,12 @@ main {
                         background: #FFFFFF;
                         box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.08);
                         border-radius: 3px;
+
                         &:not(:last-child) {
                             margin-bottom: 20px;
                         }
 
-                        &:hover{
+                        &:hover {
                             box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
                         }
 
@@ -478,5 +487,164 @@ main {
                 }
             }
         }
+
+        .main_tags {
+            margin-top: 80px;
+
+            .tags_wrapper {
+                margin-top: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                margin: 20px -5px;
+
+                .tag-item {
+                    color: #333333;
+                    font-size: 0.875em;
+                    background: #FFFFFF;
+                    border: 0.5px solid #E5E5E5;
+                    border-radius: 3px;
+                    padding: 8px 25px;
+                    margin: 5px;
+                    text-align: center;
+                    width: 100%;
+                    flex: 0 0 25%;
+                    transition: all .3s;
+
+                    &:hover {
+                        color: $orange;
+                        border: 0.5px solid $orange;
+                    }
+                }
+            }
+        }
+
+        .subscribe {
+            margin-top: 80px;
+
+            h4 {
+                color: #333333;
+                font-size: 0.875em;
+                font-weight: 500;
+            }
+
+            form {
+                input {
+                    background: #FFFFFF;
+                    border: 0.5px solid #E5E5E5;
+                    box-sizing: border-box;
+                    border-radius: 3px;
+                    color: #A0A0A0;
+                    font-size: 0.875em;
+                    width: 100%;
+                    padding: 16px 24px;
+
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+
+                    &:focus {
+                        &::-webkit-input-placeholder {
+                            text-indent: 500px;
+                            transition: text-indent 0.7s ease;
+                        }
+                    }
+
+                }
+            }
+
+            button {
+                background: linear-gradient(206.33deg, #FFC000 1.55%, #FF8A00 95.8%);
+                box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.08);
+                border-radius: 3px;
+                border: 1px solid transparent;
+                color: $fffcolor;
+                padding: 16px;
+                width: 100%;
+                cursor: pointer;
+                outline: none;
+                margin-top: 20px;
+                font-size: 0.875em;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    color: #333333;
+                    background: #fff;
+                    border: 1px solid #FF8A00;
+                }
+            }
+        }
+
+        .calendar {
+            margin-top: 80px;
+
+            .calendar_wrapper {
+                margin-top: 40px;
+                background: #FFFFFF;
+                mix-blend-mode: normal;
+                box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+                border-radius: 3px;
+                padding: 20px 20px;
+
+                .calendar_item {
+                    display: flex;
+                    justify-content: space-evenly;
+                    margin: 20px 0;
+
+                    img{
+                        display: block;
+                        border-radius: 2px;
+                        max-width: 110px;
+                        width: 50%;
+                        
+                    }
+                    .calendar_item_descr {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        color: #333333;
+                        margin-left: 10px;
+                        text-align: left;
+                        width: 50%;
+
+                        .event_type {
+
+                            font-weight: 500;
+                            text-transform: uppercase;
+                        }
+
+                        .event_name {
+                            font-size: 0.750em;
+                            margin-top: 5px;
+                        }
+
+                        .event_date {
+                            margin-top: 15%;
+                            color: $orange;
+                            font-size: 0.750em;
+                        }
+                    }
+                    &:hover{
+                        opacity: .6;
+                        transition: opacity .3s;
+                    }
+                    
+                }
+                .event_btn{
+                    width: 180px;
+                    margin: 0 auto;
+                    text-align: center;
+                    border: 1px solid transparent;
+                    font-size: 	0.625em;
+                    line-height: 15px;
+                    &:hover{
+                        color: #333333;
+                        background: #fff;
+                        border: 1px solid #FF8A00;
+                    }
+                }
+            }
+        }
+
     }
 }
