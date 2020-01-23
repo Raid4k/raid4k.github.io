@@ -2,7 +2,7 @@ footer {
     background: linear-gradient(180deg, #101010 31.1%, #150C23 100.75%);
 
     .footer_wrapper {
-        
+
         max-width: 1300px;
         padding: 5% 15px 1% 15px;
         margin: 0 auto;
@@ -10,8 +10,42 @@ footer {
 
         .footer_top {
             display: flex;
-            justify-content: space-around;
+            width: 100%;
+            @include breakpoint(md-min){
+                flex-direction: column;
+            }
+            .footer_top-l {
+                width: 20%;
+                @include breakpoint(md-min){
+                    display: flex;
+                    justify-content: center;
+                    
+                    width: 100%;
+                }
+            }
 
+            .footer_top-r {
+                display: flex;
+                width: 80%;
+                justify-content: space-evenly;
+                @include breakpoint(md-min){
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                @include breakpoint(md-min){
+                    .col-2 ,.col-3 {
+                        width: 40%;
+                    }
+                    .col-4{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                }
+            }
 
             a {
                 color: $fffcolor;
@@ -44,6 +78,11 @@ footer {
             .col-1 {
                 max-width: 340px;
                 width: 100%;
+                @include breakpoint(md-min){
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                }
 
                 p {
                     margin-top: 30px;
@@ -57,7 +96,7 @@ footer {
                 ul {
                     display: flex;
                     flex-direction: column;
-                    
+
 
                 }
             }
@@ -117,13 +156,16 @@ footer {
                 }
             }
         }
-        .footer_bot{
+
+        .footer_bot {
             position: relative;
-            border-top: 1px solid #FFFFFF;
+            border-top: 1px solid #E5E5E5;
             margin-top: 20px;
-            h5{
+
+            h5 {
                 text-align: center;
                 font-size: 0.875em;
+                letter-spacing: 1px;
             }
         }
     }

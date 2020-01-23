@@ -1,7 +1,15 @@
 main {
-    padding:  280px 0 100px 0;
+    padding: 280px 0 100px 0;
     color: $maintext;
     display: flex;
+    transition: padding .3s;
+    @include breakpoint(md-min){
+        padding: 180px 0 100px 0;       
+    }
+    
+    @include breakpoint(ldx-min){
+        flex-direction: column-reverse;      
+    }
 
     h1 {
         text-transform: uppercase;
@@ -13,7 +21,9 @@ main {
 
     .main-wrapper {
         margin-right: 5%;
-
+        @include breakpoint(ldx-min){
+              margin-right: 0;
+        }
 
 
         .new_casino {
@@ -27,15 +37,23 @@ main {
 
                 .new_casino-item {
                     display: flex;
-
                     margin-bottom: 10px;
                     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
                     border-radius: 3px;
                     flex: 0 0 48%;
 
+                    &:last-child {
+                        @include breakpoint(md-min) {
+                            display: none;
+                        }
+                    }
+
                     @include breakpoint (xlgx-min) {
                         flex: 0 0 100%;
                         transition: all .3s;
+                    }
+                    @include breakpoint(sm-min){
+                        flex-direction: column;
                     }
 
 
@@ -48,12 +66,22 @@ main {
                         background-size: cover;
                         background-repeat: no-repeat;
                         margin-right: 10px;
-
+                        @include breakpoint(sm-min){
+                            max-width: unset;
+                            margin-right: 0;
+                            border-radius: 3px 3px 0 0;
+                            
+                        }
                     }
 
                     .casino_descr {
                         flex-direction: column;
                         display: flex;
+                        @include breakpoint(sm-min){
+                           align-items: center;
+                           text-align: center;
+                           padding: 0 5%;
+                        }
 
                         h2 {
                             font-size: 1.286em;
@@ -96,7 +124,7 @@ main {
             &::after {
                 content: '';
                 position: absolute;
-                height: 2px;
+                height: 1px;
                 width: calc(50% - 120px);
                 left: 0;
                 bottom: 12px;
@@ -106,7 +134,7 @@ main {
             &::before {
                 content: '';
                 position: absolute;
-                height: 2px;
+                height: 1px;
 
                 width: calc(50% - 120px);
                 right: 0;
@@ -125,6 +153,7 @@ main {
 
         .f_block {
             margin-top: 30px;
+
 
             .new_news-wrapper.f_wrapper {
                 display: flex;
@@ -235,7 +264,7 @@ main {
                             margin: 10px 0;
                             padding-right: 35px;
                             overflow: hidden;
-
+                            color: #555555;
                             display: -webkit-box;
                             text-overflow: ellipsis;
                             -webkit-line-clamp: 4;
@@ -244,14 +273,14 @@ main {
                         }
 
                         .f_btn {
-                            padding: 12px 40px;
+                            padding: 8px 24px;
                             border: 1px solid transparent;
                             margin-top: 20px;
+                            background: linear-gradient(224.43deg, #FFC000 1.55%, #FF8A00 95.8%);
 
                             &:hover {
-                                background: #fff;
-                                color: #000;
-                                border: 1px solid #FF8A00;
+                                box-shadow: 0px 2px 4px rgba(153, 153, 153, 0.4);
+                                background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(223.46deg, #FFC000 1.55%, #FF8A00 95.8%);
 
                             }
                         }
@@ -274,7 +303,8 @@ main {
                         }
 
                         &:hover {
-                            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+                            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+                            transition: box-shadow .3s;
                         }
 
                         .f_list-img {
@@ -332,6 +362,42 @@ main {
                     }
                 }
             }
+            .new_bonus-item{
+                @include breakpoint(md-min){
+                    display: none;
+                }
+            }
+            .new_bonus-list.f_list{
+                @include breakpoint(md-min){
+                    width: 100%;
+                }
+                .new_bonus-list-item{
+                    @include breakpoint(md-min){
+                        margin-left: 0;
+                    }
+                }
+                
+                .bonus_list-descr{
+                    h3{
+                        padding-right: 5px;
+                    }
+                }
+            }
+            .new_news-wrapper.f_wrapper{
+                .f_item-wrapper{
+                    @include breakpoint(md-min){
+                        display: none;
+                    }
+                }
+                .f_list{
+                    .f_list-item{
+                        @include breakpoint(md-min){
+                            width: 100%;
+                            flex: unset;
+                        }
+                    }
+                }
+            }
 
         }
 
@@ -342,7 +408,9 @@ main {
         width: 100%;
         max-width: 330px;
         min-width: 250px;
-        height: 450px;
+        @include breakpoint(ldx-min){
+              max-width: unset;
+        }
 
 
         h1 {
@@ -352,11 +420,12 @@ main {
             &:after {
                 content: '';
                 position: absolute;
-                height: 2px;
+                height: 1px;
                 width: 100%;
                 background: #E5E5E5;
                 bottom: -5px;
                 left: 0;
+                
             }
 
             span {
@@ -365,12 +434,15 @@ main {
                 &:before {
                     content: '';
                     position: absolute;
-                    height: 2px;
+                    height: 1px;
                     width: 100%;
                     background: linear-gradient(182.86deg, #FFC000 1.55%, #FF8A00 95.8%);
                     bottom: -5px;
                     left: 0;
                     z-index: 1;
+                    @include breakpoint(md-min){
+                        bottom: -6px;
+                    }
                 }
             }
         }
@@ -380,6 +452,9 @@ main {
             max-width: 330px;
             min-width: 250px;
             height: 450px;
+            @include breakpoint(ldx-min){
+                max-width: unset;
+          }
 
 
             h2 {
@@ -397,11 +472,11 @@ main {
                 margin-top: 30px;
                 letter-spacing: 1.5px;
 
+
                 li {
 
                     display: flex;
                     align-items: center;
-
                     position: relative;
                     overflow: hidden;
                     margin: 5px 0;
@@ -416,7 +491,7 @@ main {
                         transition: margin-left .3s;
                         font-size: 0.857em;
                         line-height: 15px;
-                        color: $maintext;
+                        color: #555555;
 
 
                         &:hover {
@@ -435,6 +510,7 @@ main {
                             padding-left: 15%;
                             margin: 0 5px;
                             text-transform: uppercase;
+                           
                         }
                     }
 
@@ -457,8 +533,8 @@ main {
                         z-index: 1;
 
                         &:hover {
-                            color: $maintext !important;
-                            background: linear-gradient(222.96deg, #FFC000 1.55%, #FF8A00 95.8%), linear-gradient(169.94deg, #1738BC 6.95%, #315EFB 93.05%);
+                            color: #555555 !important;
+                            background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(223.46deg, #FFC000 1.55%, #FF8A00 95.8%);
 
                         }
 
@@ -490,12 +566,20 @@ main {
 
         .main_tags {
             margin-top: 80px;
-
+            @include breakpoint(sm-min){
+                display: none;
+            }
             .tags_wrapper {
                 margin-top: 20px;
                 display: flex;
                 flex-wrap: wrap;
                 margin: 20px -5px;
+                @include breakpoint(ldx-min){
+                                
+                 justify-content: center;              
+                }
+                
+                
 
                 .tag-item {
                     color: #333333;
@@ -520,7 +604,9 @@ main {
 
         .subscribe {
             margin-top: 80px;
-
+            @include breakpoint(sm-min){
+                display: none;
+            }
             h4 {
                 color: #333333;
                 font-size: 0.875em;
@@ -564,19 +650,24 @@ main {
                 outline: none;
                 margin-top: 20px;
                 font-size: 0.875em;
-
+                text-transform: uppercase;
+                background: linear-gradient(224.43deg, #FFC000 1.55%, #FF8A00 95.8%);
+                transition: all .3s;
+                
+                
                 &:hover,
                 &:focus,
                 &:active {
-                    color: #333333;
-                    background: #fff;
-                    border: 1px solid #FF8A00;
+                    box-shadow: 0px 2px 4px rgba(153, 153, 153, 0.4);
+                    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(223.46deg, #FFC000 1.55%, #FF8A00 95.8%);
                 }
             }
         }
 
         .calendar {
             margin-top: 80px;
+            margin-bottom: 80px;
+            
 
             .calendar_wrapper {
                 margin-top: 40px;
@@ -591,13 +682,14 @@ main {
                     justify-content: space-evenly;
                     margin: 20px 0;
 
-                    img{
+                    img {
                         display: block;
                         border-radius: 2px;
                         max-width: 110px;
                         width: 50%;
-                        
+
                     }
+
                     .calendar_item_descr {
                         display: flex;
                         flex-direction: column;
@@ -624,23 +716,25 @@ main {
                             font-size: 0.750em;
                         }
                     }
-                    &:hover{
+
+                    &:hover {
                         opacity: .6;
                         transition: opacity .3s;
                     }
-                    
+
                 }
-                .event_btn{
+
+                .event_btn {
                     width: 180px;
                     margin: 0 auto;
                     text-align: center;
                     border: 1px solid transparent;
-                    font-size: 	0.625em;
+                    font-size: 0.875em;
                     line-height: 15px;
-                    &:hover{
-                        color: #333333;
-                        background: #fff;
-                        border: 1px solid #FF8A00;
+
+                    &:hover {
+                        box-shadow: 0px 2px 4px rgba(153, 153, 153, 0.4);
+                        background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(223.46deg, #FFC000 1.55%, #FF8A00 95.8%);
                     }
                 }
             }

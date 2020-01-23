@@ -20,6 +20,9 @@ header {
                 }
 
                 .navigation {
+                    @include breakpoint(md-min){
+                        display: none;
+                    }
                     ul.menu {
                         display: flex;
 
@@ -27,6 +30,7 @@ header {
                             
                             position: relative;
                             width: 100%;
+                            font-family: 'InterMedium';
                             &:hover{
                                 .submenu{
                                     visibility:visible;
@@ -102,7 +106,7 @@ header {
                                         }
                                         a{
                                             color: #555555;
-                                            font-size: 14px;
+                                            font-size: 0.875em;
                                             line-height: 17px;
                                             text-transform: none;
                                             text-align: left;
@@ -141,7 +145,12 @@ header {
                     margin-right: 5px;
                     display: flex;
                     justify-content: flex-end;
-
+                    @include breakpoint(xlgx-min) {
+                        display: none;
+                    }
+                    @include breakpoint(md-min){
+                        display: none;
+                    }
                     input {
                         max-width: 280px;
                         min-width: 90px;
@@ -160,7 +169,11 @@ header {
                     width: 30%;
 
                     @include breakpoint(xlgx-min) {
-                        flex-direction: column;
+                        width: 100%;
+                    }
+                    @include breakpoint(md-min){
+                        flex-direction: row;
+                       
                     }
 
                     a {
@@ -171,7 +184,7 @@ header {
                         text-align: center;
                         line-height: 28px;
                         color: $fffcolor;
-                        font-size: 10px;
+                        font-size: 	0.625em;
                         transition: all .3s;
                         margin-right: 5px;
 
@@ -203,27 +216,35 @@ header {
             .hero_header {
                 display: flex;
                 justify-content: space-between;
-
+                @include breakpoint(ldx-min){
+                    justify-content: center;
+                    
+                    }
                 .header_article {
                     display: flex;
                     flex-direction: column;
                     height: 250px;
                     max-width: 450px;
                     width: 100%;
+                    @include breakpoint(ldx-min){
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    }
 
                     h1 {
-                        font-size: 34px;
+                        font-size: 2.429em;
                     }
 
                     p {
-                        font-size: 18px;
+                        font-size: 1.125em;
                         line-height: 22px;
                         margin: 20px 0;
                     }
 
                     a {
                         @extend .btn;
-                        font-size: 12px;
+                        font-size: 0.750em;
                     }
                 }
 
@@ -231,7 +252,9 @@ header {
                     position: relative;
                     height: 100%;
                     width: 100%;
-
+                    @include breakpoint(ldx-min){
+                        display: none;
+                  }
                     img {
                         display: block;
                         position: absolute;
