@@ -6,9 +6,12 @@ main {
     @include breakpoint(md-min){
         padding: 180px 0 100px 0;       
     }
-    
+   
     @include breakpoint(ldx-min){
         flex-direction: column-reverse;      
+    }
+    @include breakpoint(ld-min){
+        flex-direction: column;      
     }
 
     h1 {
@@ -530,6 +533,9 @@ main {
         min-width: 250px;
         @include breakpoint(ldx-min){
               max-width: unset;
+        }
+        @include breakpoint(ld-min){
+            margin-top: 80px;     
         }
 
 
