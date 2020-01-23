@@ -10,6 +10,23 @@ header {
             .header_left {
                 display: flex;
                 align-items: center;
+                .mobile_btn{
+                    margin-right: 20px;
+                    display: none;
+                    position: relative; width: 32px;height: 32px;
+                    @include breakpoint(lg-min){
+                        display: block;
+                    }
+                    .hamb_btn{
+                        border: none;
+                        background:url(../img/hamburger.svg) ,transparent;
+                        background-repeat: no-repeat;
+                        background-size: 80%;
+                        background-position: center; 
+                        padding: 15px;
+                        cursor: pointer;
+                    }
+                }
 
                 .logo {
                     margin-right: 30px;
@@ -21,6 +38,9 @@ header {
 
                 .navigation {
                     @include breakpoint(md-min){
+                        display: none;
+                    }
+                    @include breakpoint(lg-min){
                         display: none;
                     }
                     ul.menu {
@@ -267,3 +287,67 @@ header {
         }
     }
 }
+
+.hidden-menu {
+    display: block;
+    position: fixed;
+    list-style:none;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+    width: 250px;
+    background-color: #fff;
+    height: 400px;
+    top: 0;
+    left: -400px;
+    transition: left .3s;
+    z-index: 2;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+  }
+  .hidden-menu-ticker {
+    display: none;
+  }
+  .btn-menu {
+    color: #fff;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    transition: left .3s;
+    z-index: 3;
+    width: 32px;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+  }
+  .btn-menu span {
+    display: block;
+    height: 5px;
+    background-color: #fff;
+    margin: 5px 0 0;
+    transition: all .1s linear .23s;
+    position: relative;
+  }
+  .btn-menu span.first {
+    margin-top: 0;
+  }
+  .hidden-menu-ticker:checked ~ .btn-menu {
+    left: 250px;
+    top: 0;
+    position: fixed;
+  }
+  .hidden-menu-ticker:checked ~ .hidden-menu {
+    left: 0;
+  }
+  .hidden-menu-ticker:checked ~ .btn-menu span.first {
+    -webkit-transform: rotate(45deg);
+    top: 10px;
+  }
+  .hidden-menu-ticker:checked ~ .btn-menu span.second {
+    opacity: 0;
+  }
+  .hidden-menu-ticker:checked ~ .btn-menu span.third {
+    -webkit-transform: rotate(-45deg);
+    top: -10px;
+  }
