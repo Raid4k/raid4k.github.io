@@ -54,6 +54,11 @@ main {
                     }
                     @include breakpoint(sm-min){
                         flex-direction: column;
+                        &:nth-child(3){
+                            display: none;
+                            
+                        }
+                        
                     }
 
 
@@ -400,6 +405,121 @@ main {
             }
 
         }
+        .calendar {
+            margin-top: 80px;
+            margin-bottom: 80px;
+            display: none;
+            @include breakpoint(sm-min){
+                display: block;
+            }
+            h1 {
+                text-align: center;
+                position: relative;
+    
+                &:after {
+                    content: '';
+                    position: absolute;
+                    height: 1px;
+                    width: 100%;
+                    background: #E5E5E5;
+                    bottom: -5px;
+                    left: 0;
+                    
+                }
+    
+                span {
+                    position: relative;
+    
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        height: 1px;
+                        width: 100%;
+                        background: linear-gradient(182.86deg, #FFC000 1.55%, #FF8A00 95.8%);
+                        bottom: -5px;
+                        left: 0;
+                        z-index: 1;
+                        @include breakpoint(md-min){
+                            bottom: -6px;
+                        }
+                        @include breakpoint(sm-min){
+                            bottom: -7px;
+                            
+                        }
+                    }
+                }
+            }
+
+            .calendar_wrapper {
+                margin-top: 40px;
+                background: #FFFFFF;
+                mix-blend-mode: normal;
+                box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+                border-radius: 3px;
+                padding: 20px 20px;
+
+                .calendar_item {
+                    display: flex;
+                    justify-content: space-evenly;
+                    margin: 20px 0;
+
+                    img {
+                        display: block;
+                        border-radius: 2px;
+                        max-width: 110px;
+                        width: 50%;
+
+                    }
+
+                    .calendar_item_descr {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        color: #333333;
+                        margin-left: 10px;
+                        text-align: left;
+                        width: 50%;
+
+                        .event_type {
+
+                            font-weight: 500;
+                            text-transform: uppercase;
+                        }
+
+                        .event_name {
+                            font-size: 0.750em;
+                            margin-top: 5px;
+                        }
+
+                        .event_date {
+                            margin-top: 15%;
+                            color: $orange;
+                            font-size: 0.750em;
+                        }
+                    }
+
+                    &:hover {
+                        opacity: .6;
+                        transition: opacity .3s;
+                    }
+
+                }
+
+                .event_btn {
+                    width: 180px;
+                    margin: 0 auto;
+                    text-align: center;
+                    border: 1px solid transparent;
+                    font-size: 0.875em;
+                    line-height: 15px;
+
+                    &:hover {
+                        box-shadow: 0px 2px 4px rgba(153, 153, 153, 0.4);
+                        background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(223.46deg, #FFC000 1.55%, #FF8A00 95.8%);
+                    }
+                }
+            }
+        }
 
     }
 
@@ -442,6 +562,9 @@ main {
                     z-index: 1;
                     @include breakpoint(md-min){
                         bottom: -6px;
+                    }
+                    @include breakpoint(sm-min){
+                        bottom: -7px;
                     }
                 }
             }
@@ -667,7 +790,9 @@ main {
         .calendar {
             margin-top: 80px;
             margin-bottom: 80px;
-            
+            @include breakpoint(sm-min){
+                display: none;
+            }
 
             .calendar_wrapper {
                 margin-top: 40px;
