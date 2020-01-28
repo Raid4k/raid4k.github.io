@@ -21,7 +21,7 @@
             captionFormatAllSelected: '{0} all selected!', // format of caption text when all elements are selected. set null to use captionFormat. It will not work if there are disabled elements in select.
             floatWidth: 400,              // Screen width of device at which the list is rendered in floating popup fashion.
             forceCustomRendering: false,  // force the custom modal on all devices below floatWidth resolution.
-            nativeOnDevice: ['Android', 'BlackBerry', 'iPhone', 'iPad', 'iPod', 'Opera Mini', 'IEMobile', 'Silk'], //
+            nativeOnDevice: false, //
             outputAsCSV: false,           // true to POST data as csv ( false for Html control array ie. default select )
             csvSepChar: ',',              // separation char in csv mode
             okCancelInMulti: false,       // display ok cancel buttons in desktop mode multiselect also.
