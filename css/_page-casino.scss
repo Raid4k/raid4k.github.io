@@ -64,33 +64,153 @@
         color: #555555;
 
         h1 {
-            font-size: 0.875em;
+            font-size: 	1.500em;
+        }
+        p{
+            margin-right: 20px;
+            font-size: 	0.875em;
         }
     }
 
     .casino-filter {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: 20px;
+        @include breakpoint (md-min) {
+            margin-right: 0;
+        }
         .SumoSelect {
+            margin: 0 20px 20px 0;
+            width: 100%;
+            flex: 1 0 30%;
+
+            @include breakpoint (md-min) {
+                flex: 1 0 30%;
+            }
+
+            @include breakpoint(ldx-min) {
+                flex: 1 0 100%;
+            }
+
             ::-webkit-scrollbar {
                 width: 2px;
                 background: #E5E5E5;
 
 
             }
+
             ::-webkit-scrollbar-track {
-                 
+
                 border-radius: 5px;
             }
-             
+
             ::-webkit-scrollbar-thumb {
                 border-radius: 10px;
-                
                 background: $orange;
-                
+
             }
-            .select-all{
-                border: none;;
+
+            .select-all {
+                border: none;
+                ;
             }
-           
+
+        }
+    }
+
+    .all-casino-list {
+
+        display: flex;
+        flex-wrap: wrap;
+
+        .all-casino-item {
+            
+            max-width: 265px;
+            width: 100%;
+            display: inline-block;
+            background: #FFFFFF;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+            border-radius: 3px;
+            margin: 20px 20px 20px 0;
+            flex: 1 0 30%;
+
+
+            .all-casino-item-img {
+                img {
+                    width: 100%;
+                    display: block;
+                    
+                }
+            }
+
+            .all-casino-item-descr {
+                padding: 24px;
+
+                .all-casino-rating {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 0.875em;
+                    align-items: center;
+                    
+
+                    img {
+                        width: 100%;
+                        display: block;
+                        
+                    }
+                    >span{
+                        width: 100%;
+                    }
+                    .all-casino-rating-number {
+                        color: $orange;
+                    }
+                }
+
+                .all-casino-item-title {
+                    display: flex;
+                    margin-top: 10px;
+
+                    h2 {
+                        width: 100%;
+                        font-size: 1.125em;
+                    }
+
+                    .all-casino-top {
+                        position: relative;
+
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            height: 22px;
+                            width: 22px;
+                            top: 0;
+                            right: 0;
+                            background: url(../img/topcasino.svg);
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                        }
+                    }
+                }
+            }
+
+            .all-casino-item-text {
+                color: #545454;
+                font-size: 0.875em;
+                overflow: hidden;
+                display: block;
+                display: -webkit-box;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 5;
+                /* количество строк */
+                -webkit-box-orient: vertical;
+                margin-bottom: 10px;
+            }
+
+            .all-casino-item-play {
+                width: 100%;
+                padding: 8px 32px;
+                font-size: 0.750em;
+            }
         }
     }
 }

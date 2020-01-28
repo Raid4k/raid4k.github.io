@@ -99,10 +99,11 @@
 
 .SumoSelect>.CaptionCont {
     position: relative;
-    border: 1px solid #A4A4A4;
+    border: 0.5px solid #E5E5E5;
+   border-radius: 6px;
     min-height: 14px;
     background-color: #fff;
-    border-radius: 2px;
+    padding: 12px ;
     margin: 0;
 }
 
@@ -113,6 +114,7 @@
     white-space: nowrap;
     overflow: hidden;
     cursor: default;
+    font-size: 0.875em;
 }
 
 /*placeholder style*/
@@ -165,8 +167,12 @@
 }
 
 .SumoSelect.open>.optWrapper {
-    top: 35px;
+    top: 42px;
     display: block;
+    border: 0.5px solid #E5E5E5;
+
+box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+border-radius: 6px;
 }
 
 .SumoSelect.open>.optWrapper.up {
@@ -259,6 +265,7 @@
     overflow: hidden;
     display: block;
     cursor: pointer;
+    
 }
 
 .SumoSelect>.optWrapper>.options li span {

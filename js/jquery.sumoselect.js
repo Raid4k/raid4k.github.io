@@ -21,13 +21,13 @@
             captionFormatAllSelected: '{0} all selected!', // format of caption text when all elements are selected. set null to use captionFormat. It will not work if there are disabled elements in select.
             floatWidth: 400,              // Screen width of device at which the list is rendered in floating popup fashion.
             forceCustomRendering: false,  // force the custom modal on all devices below floatWidth resolution.
-            nativeOnDevice: false, //
+            nativeOnDevice: ['Android', 'BlackBerry', 'iPhone', 'iPad', 'iPod', 'Opera Mini', 'IEMobile', 'Silk'], //
             outputAsCSV: false,           // true to POST data as csv ( false for Html control array ie. default select )
             csvSepChar: ',',              // separation char in csv mode
             okCancelInMulti: false,       // display ok cancel buttons in desktop mode multiselect also.
             isClickAwayOk: false,         // for okCancelInMulti=true. sets whether click outside will trigger Ok or Cancel (default is cancel).
             triggerChangeCombined: true,  // im multi select mode whether to trigger change event on individual selection or combined selection.
-            selectAll: false,             // to display select all button in multiselect mode.|| also select all will not be available on mobile devices.
+            selectAll: true,             // to display select all button in multiselect mode.|| also select all will not be available on mobile devices.
 
             search: false,                // to display input for filtering content. selectAlltext will be input text placeholder
             searchText: 'Search...',      // placeholder for search input
