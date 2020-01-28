@@ -1,0 +1,96 @@
+.casino-body {
+    background: linear-gradient(180deg, #101010 31.1%, #150C23 100.75%);
+    background-size: 100% 120px;
+    background-repeat: no-repeat;
+
+    main {
+        padding: 80px 0 100px 0;
+    }
+}
+
+.casino-h-wrapper {
+    .header_bot {
+        display: none;
+    }
+}
+
+.main-wrapper {
+    .bread {
+        margin: 0 0 15px 0;
+
+        ul {
+            display: flex;
+
+            li {
+
+
+                &:not(:last-child) {
+                    margin-right: 15px;
+                }
+
+                &:last-child {
+                    a {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+
+                a {
+                    color: #555555;
+                    font-size: 0.750em;
+                    position: relative;
+                    display: block;
+
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 3px;
+                        right: -14px;
+                        height: 10px;
+                        width: 10px;
+                        background: url(../img/arrow-r.svg);
+                        background-repeat: no-repeat;
+
+                    }
+
+                }
+            }
+        }
+    }
+
+    .casino-title {
+        color: #555555;
+
+        h1 {
+            font-size: 0.875em;
+        }
+    }
+
+    .casino-filter {
+        .SumoSelect {
+            ::-webkit-scrollbar {
+                width: 2px;
+                background: #E5E5E5;
+
+
+            }
+            ::-webkit-scrollbar-track {
+                 
+                border-radius: 5px;
+            }
+             
+            ::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                
+                background: $orange;
+                
+            }
+            .select-all{
+                border: none;;
+            }
+           
+        }
+    }
+}
