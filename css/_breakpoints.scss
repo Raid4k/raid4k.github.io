@@ -20,6 +20,11 @@
             @content;
         }
     }
+    @else if $point==md-max {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
 
     @else if $point==lg-min {
         @media (max-width: 960px) {
