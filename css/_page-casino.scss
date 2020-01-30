@@ -20,6 +20,7 @@
 }
 
 .casino-h-wrapper {
+    
     .header_bot {
         display: none;
 
@@ -41,6 +42,8 @@
 }
 
 .main-wrapper {
+    flex-grow: 1;
+    min-width: 0;
     .bread {
         margin: 0 0 15px 0;
 
