@@ -190,5 +190,47 @@
             }
           
         }
+        .tab-bonus-list{
+            display: flex;
+            flex-wrap: wrap;
+            li{ 
+                margin: 10px 0;
+                flex: 0 0 50%;
+                @include breakpoint(ld-min){
+                    flex: 0 0 100%;
+                }
+                a{
+                    display: flex;
+                   
+                }
+               
+                img{
+                    display: block;
+                    margin-right: 10px;
+                    width: 64px;
+                    height: 64px;
+                }
+                .bonus-descr{
+                    font-size: 0.875em;
+                    color: #969696;
+                    span{
+                        
+                    }
+                    h3{
+                        font-size: 0.875em;
+                        margin-bottom: 15px;
+                        color: $orange;
+                    }
+                }
+            }
+        }
+    }
+}
+.casino-review_text{
+    margin-top: 40px;
+    .casino-review_text-wrapper{
+        font-size: 0.875em;
+        color: #555555;
+        line-height: 21px;
     }
 }
