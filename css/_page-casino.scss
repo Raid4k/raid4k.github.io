@@ -155,7 +155,7 @@
 
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        // justify-content: center;
       
         &:after {
             content: '';
@@ -245,16 +245,19 @@
             }
 
             .all-casino-item-text {
-                color: #545454;
-                font-size: 0.875em;
-                overflow: hidden;
-                display: block;
-                display: -webkit-box;
-                text-overflow: ellipsis;
-                -webkit-line-clamp: 5;
-                /* количество строк */
-                -webkit-box-orient: vertical;
-                margin-bottom: 10px;
+                p{
+                    color: #545454;
+                    font-size: 0.875em;
+                    overflow: hidden;
+                    display: block;
+                    display: -webkit-box;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 5;
+                    /* количество строк */
+                    -webkit-box-orient: vertical;
+                    margin-bottom: 10px;
+                }
+              
             }
 
             .all-casino-item-play {
