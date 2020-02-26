@@ -69,10 +69,7 @@ main {
 
                         min-width: 190px;
                         max-width: 200px;
-                        min-height: 150px;
-                        background: url(../img/casilogo.png);
-                        background-size: cover;
-                        background-repeat: no-repeat;
+                        min-height: 190px;
                         margin-right: 10px;
                         @include breakpoint(sm-min){
                             max-width: unset;
@@ -101,7 +98,7 @@ main {
                             margin: 10px 0;
                         }
 
-                        .casino_text {
+                        p {
                             font-size: 0.857em;
                             line-height: 18px;
                             margin: 10px 0;
@@ -710,7 +707,7 @@ main {
                 
                 
 
-                .tag-item {
+                a {
                     color: #333333;
                     font-size: 0.875em;
                     background: #FFFFFF;
