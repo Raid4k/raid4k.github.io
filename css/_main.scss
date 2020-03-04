@@ -226,6 +226,7 @@ main {
                     }
 
                     .f_descr {
+                        
                         .f_name {
                             font-weight: 500;
                             font-size: 1.286em;
@@ -264,7 +265,18 @@ main {
                                 }
                             }
                         }
-
+                        .f_news-cont{
+                           
+                            p{
+                                overflow: hidden;
+                                display: -webkit-box;
+                                text-overflow: ellipsis;
+                                -webkit-line-clamp: 4;
+                                /* количество строк */
+                                -webkit-box-orient: vertical;
+                                margin: 0;
+                            }
+                        }
                         .f_text {
                             margin: 10px 0;
                             padding-right: 35px;
